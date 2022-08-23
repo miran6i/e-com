@@ -13,7 +13,7 @@ class Category(models.Model):
 LABEL_CHOICES = (
     ('new', 'Новинка'),
     ('bestseller', 'Хит продаж'),
-    ('ordinary', 'Обычный товар')
+    ('regular', 'Обычный товар')
 )
 
 
@@ -37,4 +37,3 @@ class ProductImage(models.Model):
 
 
 
-#TODO: add model for images

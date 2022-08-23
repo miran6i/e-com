@@ -17,4 +17,3 @@ class Order(models.Model):
     ordered_at = models.DateTimeField()
 
 
-#TODO: status,

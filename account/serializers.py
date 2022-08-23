@@ -16,10 +16,6 @@ class RegisterSerializer(serializers.ModelSerializer):
         fields = ['email', 'password', 'password_confirmation']
 
     def validation_email(self, email):
-        """Validation
-            1. password confirmation
-            2. unique email -> can't use the same email address again
-            """
         if User.objects.filter(email=email).exists():
             raise serializers.ValidationError('User with given email already exists')
         return email
@@ -32,7 +28,6 @@ class RegisterSerializer(serializers.ModelSerializer):
         return validated_data
 
     def create(self, validated_data):
-        """This function is called when self.save() method is called"""
         email = validated_data.get('email')
         password = validated_data.get('password')
         user = User.objects.create_user(email, password)

@@ -16,7 +16,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         representation = super(ProductSerializer, self).to_representation(instance)
-        representation['image'] = ProductImageSerializer(instance.images.all(), many=True, context=self.context).data      # images = related_name
+        representation['image'] = ProductImageSerializer(instance.images.all(), many=True, context=self.context).data
         return representation
 
 

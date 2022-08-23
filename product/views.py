@@ -32,15 +32,3 @@ class ProductImageViewSet(viewsets.ReadOnlyModelViewSet):
     def get_serializer_context(self):
         return {'request': self.request}
 
-
-#TODO: add views for images
-#TODO: related products in category details
-#TODO: add pagination
-#TODO: filtrating
-#TODO: add to cart
-
-
-
-
-
-
